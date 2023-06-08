@@ -12,7 +12,7 @@ const getDbInfo = async () => {
         }
     })
     console.log(recipesDb);
-    
+
 
     const convertedRecipes = recipesDb.map(recipe => {
         const diets = recipe.Diets.map(typeDiet => typeDiet.name)
@@ -21,7 +21,7 @@ const getDbInfo = async () => {
             diets
         }
     })
-    
+
     return convertedRecipes
 
 }

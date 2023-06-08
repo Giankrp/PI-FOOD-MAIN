@@ -7,7 +7,7 @@ const recipes = Router()
 
 recipes.get("/recipes", getRecipes)
 
-recipes.get("/recipes/:idRecipes",getRecipesByIdController)
+recipes.get("/recipes/:idRecipes", getRecipesByIdController)
 
 
 module.exports = recipes

@@ -1,7 +1,7 @@
 const getApiInfo = require("./getApiInfo")
 const getDbInfo = require("./getDbInfo")
 
-const getAllInfo = async()=>{
+const getAllInfo = async () => {
     const apiInfo = await getApiInfo()
     const dbInfo = await getDbInfo()
 

@@ -1,7 +1,7 @@
 const getAllInfo = require("../handlers/getAllInfo")
 
 const getRecipes = async (req, res) => {
-    const  {name}  = req.query
+    const { name } = req.query
     let allRecipes = await getAllInfo();
     try {
         if (name) {
@@ -10,7 +10,7 @@ const getRecipes = async (req, res) => {
             )
             recipeName.length
                 ? res.status(200).json(recipeName)
-                : res.status(404).json({ message: "no se encontro la receta" })
+                : res.status(404).json({ message: "Recipe not found" })
         } else {
             return res.status(200).json(allRecipes)
         }

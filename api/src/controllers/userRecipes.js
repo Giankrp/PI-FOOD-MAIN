@@ -20,9 +20,9 @@ const userRecipes = async (req, res) => {
                 where: { name: typeDiets }
             })
             createRecipe.addDiet(dietDb)
-           return res.status(200).json({message: "Recipe created successfully"})
+            return res.status(200).json({ message: "Recipe created successfully" })
         } catch (error) {
-            return res.status(400).json({message: error.message})
+            return res.status(400).json({ message: error.message })
         }
 
     }

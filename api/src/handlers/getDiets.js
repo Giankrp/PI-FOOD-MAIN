@@ -18,7 +18,7 @@ const getDiets = async () => {
     for (const diet of onlyDiets) {
         await Diet.findOrCreate({ where: { name: diet.name } })
     }
-return onlyDiets
+    return onlyDiets
 }
 
 module.exports = getDiets

@@ -1,6 +1,6 @@
-const {Router} = require("express")
+const { Router } = require("express")
 const postRecipes = Router()
-const userRecipes = require("../handlers/userRecipes")
+const userRecipes = require("../controllers/userRecipes")
 
 postRecipes.post("/recipes", userRecipes)
 
