@@ -11,9 +11,9 @@ const getRecipesById = async (id) => {
             where: { id },
             include: {
                 mocdel: Diet,
-                atributes: ["name"],
+                attributes: ["name"],
                 through: {
-                    atributes: []
+                    attributes: []
                 }
             }
         })

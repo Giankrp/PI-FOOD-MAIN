@@ -5,21 +5,23 @@ const getDbInfo = async () => {
     const recipesDb = await Recipe.findAll({
         include: {
             model: Diet,
-            atributes: ["name"],
+            attributes: ["name"],
             through: {
-                atributes: []
+                attributes: []
             }
         }
     })
+    console.log(recipesDb);
+    
 
     const convertedRecipes = recipesDb.map(recipe => {
         const diets = recipe.Diet.map(typeDiet => typeDiet.name)
-
         return {
             ...recipe.toJSON(),
             diets
         }
     })
+    
     return convertedRecipes
 
 }
