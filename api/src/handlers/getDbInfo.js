@@ -15,7 +15,7 @@ const getDbInfo = async () => {
     
 
     const convertedRecipes = recipesDb.map(recipe => {
-        const diets = recipe.Diet.map(typeDiet => typeDiet.name)
+        const diets = recipe.Diets.map(typeDiet => typeDiet.name)
         return {
             ...recipe.toJSON(),
             diets

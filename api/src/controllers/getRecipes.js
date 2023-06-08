@@ -2,8 +2,8 @@ const getAllInfo = require("../handlers/getAllInfo")
 
 const getRecipes = async (req, res) => {
     const  {name}  = req.query
+    let allRecipes = await getAllInfo();
     try {
-        let allRecipes = await getAllInfo();
         if (name) {
             let recipeName = await allRecipes.filter((prop) =>
                 prop.name.toLowerCase().includes(name.toLowerCase())
