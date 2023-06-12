@@ -11,7 +11,6 @@ const getDbInfo = async () => {
             }
         }
     })
-    console.log(recipesDb);
 
 
     const convertedRecipes = recipesDb.map(recipe => {
