@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const getRecipes = () => {
     return async (dispatch) => {
-        const { data } = axios.get(`localhost:3001/recipes`)
+        const { data } = await axios.get("http://localhost:3001/recipes",{})
         return dispatch({
             type: GET_RECIPES,
             payload: data
@@ -41,7 +41,7 @@ export const sortByPuntuation = (payload) => {
 
 export const getRecipesByName = (name) => {
     return async (dispatch) => {
-        await axios.get(`recipes?name=${name}`)
+        await axios.get(`/recipes?name=${name}`)
             .then(response => {
                 return dispatch({ type: GET_BY_NAME, payload: response.data })
             })
@@ -63,27 +63,27 @@ export const getRecipesById = (idRecipes) => {
 
 export const getDiet = () => {
     return async (dispatch) => {
-        const {data} = await axios.get(`/diets`)
+        const { data } = await axios.get(`/diets`)
         return dispatch({
-            type : GET_DIET,
-            payload : data
+            type: GET_DIET,
+            payload: data
         })
     }
 }
 
-export const postRecipe = (payload)=>{
+export const postRecipe = (payload) => {
     return async (dispatch) => {
         const data = await axios.get(`/recipes`, payload)
         return data
     }
 }
 
-export const deleteRecipe =(id)=>{
+export const deleteRecipe = (id) => {
     return async (dispatch) => {
-        const {data} = await axios.delete(`/delete/${id}`)
+        const { data } = await axios.delete(`/delete/${id}`)
         return dispatch({
-            type : DELETE_RECIPE,
-            payload : data
+            type: DELETE_RECIPE,
+            payload: data
         })
     }
 }
