@@ -55,35 +55,32 @@ const Details = () => {
 
   return (
     <div className="details-container">
-      <div className="left-details">
-        <div className="button">
-          <NavLink to={"/home"}>
-            <button type="button" class="btn-secondary">
+      <div className="container-left-details">
+        <div className="container-buttons">
+          <NavLink to="/home">
+            <button type="button" className="btn-secondary-details-button">
               Back
             </button>
           </NavLink>
-          <button className="delete-button" onClick={handleSubmit}>
+          <button className="button-eliminar btn btn-danger details-button" onClick={handleSubmit}>
             Delete Recipe
           </button>
         </div>
         <img
-          src={
-            data.image ||
-            "`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5A4cM9lx9CVbaN89X1Qu8xxc3rVY_veWIw&usqp=CAU"
-          }
-          alt={data.name}
+          src={data.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5A4cM9lx9CVbaN89X1Qu8xxc3rVY_veWIw&usqp=CAU"}
+          alt={data.image}
           className="details-image"
         />
       </div>
 
-      <div>
+      <div className="details-info">
         <h2 className="details-name">{data.name}</h2>
-        <h3 className="details-healthScore">HealthScore:{data.healthScore}</h3>
-        <h3 className="details-diet">
+        <h3 className="details-healthscore">HealthScore: {data.healthScore}</h3>
+        <h3 className="details-type-diet">
           Diets
-          <ul className="details-list">
-            {data.diets.map((type, index) => (
-              <li key={index} className="details-items">
+          <ul className="details-diet-list">
+            {data.diets && data.diets.map((type, index) => (
+              <li key={index} className="details-diet-item">
                 {type}
               </li>
             ))}
@@ -92,21 +89,21 @@ const Details = () => {
         <hr />
         <h5 className="details-summary">
           Summary
-          <h4>{data.summary.replace(/(<([^>]+)>)/gi, "")}</h4>
+          <p className="details-summary-text">{data.summary && data.summary.replace(/(<([^>]+)>)/gi, "")}</p>
         </h5>
         <div className="details-steps">
           <h5>Steps:</h5>
-          <ol className="steps-list">
+          <ol className="details-steps-list">
             {Array.isArray(data.process)
               ? data.process.map((element, index) =>
                   element.steps.map((fun, index2) => (
-                    <li key={`${index}-${index2}`} className="steps-item">
+                    <li key={`${index}-${index2}`} className="details-step-item">
                       {fun.step}
                     </li>
                   ))
                 )
-              : data.process.split("|").map((step, index3) => (
-                  <li key={index3} className="steps-item">
+              : data.process && data.process.split("|").map((step, index3) => (
+                  <li key={index3} className="details-step-item">
                     {step}
                   </li>
                 ))}
@@ -117,5 +114,4 @@ const Details = () => {
   );
 };
 
-
-export default Details
+export default Details;

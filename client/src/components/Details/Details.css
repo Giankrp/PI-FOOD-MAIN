@@ -1,0 +1,181 @@
+/* Contenedor principal */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container-buttons {
+  margin-bottom: 7rem;
+}
+
+.container-left-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.button-eliminar {
+  margin-left: 3rem;
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-eliminar:hover {
+  background-color: #cc0000;
+}
+
+.btn-secondary-details-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-secondary-details-button:hover {
+  background-color: #495057;
+}
+
+/* Imagen de la receta */
+.details-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.details-image:hover {
+  transform: scale(1.1);
+}
+
+/* Información de la receta */
+.details-info {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 3%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ID de la receta */
+.details-id {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Nombre de la receta */
+.details-name {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* HealthScore */
+.details-healthscore {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Tipo de dieta */
+.details-type-diet {
+  background-color: #FFEBCD;
+  border-radius: 3%;
+  padding-bottom: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.details-type-diet:hover {
+  background-color: #FFE4C4;
+}
+
+/* Lista de tipos de dieta */
+.details-diet-list {
+  color: black;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Elemento de la lista de tipos de dieta */
+.details-diet-item {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #F5DEB3;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.details-diet-item:hover {
+  background-color: #FFE4C4;
+}
+
+/* Resumen de la receta */
+.details-summary {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Pasos de la receta */
+.details-steps {
+  border-radius: 3%;
+  padding: 1rem;
+  background-color: #F1F1F1;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Lista de pasos */
+.details-steps-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+/* Elemento de la lista de pasos */
+.details-step-item {
+  padding: 1rem;
+  border-radius: 3%;
+  background-color: #c5c4c4;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.details-step-item:hover {
+  background-color: #a1a1a1;
+}
+
+
+
+
+
+
+
+
+
+
+

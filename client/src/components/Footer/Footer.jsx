@@ -5,10 +5,10 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <section>
+    <section className="sec-footer-cta">
       <div className="footer-cta">
         <div className="footer-text">
-          <h4 className="title-cta">Proyect Food</h4>
+          <h4 className="cta-title">Proyect Food</h4>
         </div>
       </div>
     </section>

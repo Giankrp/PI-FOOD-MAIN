@@ -6,16 +6,16 @@ import Details from "./components/Details/Details"
 import FormCreation from './components/FormCreation/FormCreation';
 import axios from 'axios';
 
-axios.defaults.baseURL="http://localhost3001/recipes"
+axios.defaults.baseURL="http://localhost:3001/recipes"
 function App() {
   return (
     <div className="App">
       
       <Routes>
-        <Route exact path="/" Component={LandingPage}/>
-        <Route path="/home" Component={Home}/>
-        <Route path="/detail/:id" Component={Details}/>
-        <Route path="/recipe" Component={FormCreation}/>
+        <Route exact path="/" element={<LandingPage/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/detail/:idRecipes" element={<Details/>}/>
+        <Route path="/recipe" element={<FormCreation/>}/>
     {/* <Route path="about" Component={About}/>*/}    
     </Routes>
  

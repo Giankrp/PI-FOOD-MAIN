@@ -36,14 +36,14 @@ const Filter = ({ setOrden, setCurrentPage }) => {
 
   return (
     <div className="main-container">
-      <div className="top-bar">
+      <div className="bar-promo">
         <h4>Hecha un vistazo a todas las recetas que tenemos para ti</h4>
-        <button className="btn-registrer">¡Regístrate!</button>
+        <button className="btn-promo">¡Regístrate!</button>
         <span>Terminos y condiciones</span>
       </div>
       <div className="filter-item-img">
         <label htmlFor="filter-diet-select-img"></label>
-        <div className="filter-img">
+        <div className="diet-images">
           {Object.entries(dietImages).map(([diet, image]) => (
             <div
               key={diet}
@@ -58,11 +58,11 @@ const Filter = ({ setOrden, setCurrentPage }) => {
       </div>
 
       <div className="filter-row">
-        <div className="item-1">
+        <div className="filter-item uno">
           <label htmlFor="puntuation-select">Puntuation:</label>
           <select
             id="puntuation-select"
-            className="filter-select-class"
+            className="filter-select"
             onChange={(event) => handleSortByPuntuation(event)}
           >
             <option value="All">All puntuations</option>
@@ -71,11 +71,11 @@ const Filter = ({ setOrden, setCurrentPage }) => {
           </select>
         </div>
 
-        <div className="item-2">
+        <div className="filter-item dos">
           <label htmlFor="filter-select">Filter by creation:</label>
           <select
             id="filter-select"
-            className="filter-select-class"
+            className="filter-select"
             onChange={(event) => handleFilter(event)}
           >
             <option value="All">All recipes</option>
@@ -84,11 +84,11 @@ const Filter = ({ setOrden, setCurrentPage }) => {
           </select>
         </div>
 
-        <div className="item-3">
+        <div className="filter-item tres">
           <label htmlFor="sort-select">Sort by:</label>
           <select
             id="sort-select"
-            className="filter-select-class"
+            className="filter-select"
             onChange={(event) => handleSortByName(event)}
           >
             <option value="asc">Upward (A-Z)</option>

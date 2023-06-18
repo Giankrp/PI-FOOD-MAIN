@@ -1,0 +1,195 @@
+/* Estilos generales */
+.recipe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.recipe-form2 {
+  width: 500px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-form-back {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-form-back:hover {
+  background-color: #e0e0e0;
+}
+
+.create-recipe {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* Estilos de los campos de entrada */
+.input {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.input-field {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #ff5722;
+  box-shadow: 0 0 4px rgba(255, 87, 34, 0.4), 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.input-error {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Estilos para subir imágenes */
+.input-img {
+  margin-bottom: 20px;
+}
+
+.img-upload {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.preview-img {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+/* Estilos para la selección de dieta */
+.input-select {
+  margin-bottom: 20px;
+}
+
+.select-diet {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.diet-select {
+  margin-top: 10px;
+}
+
+.selected-diet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.delete-diet-button {
+  padding: 8px 12px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-diet-button:hover {
+  background-color: #ff3d00;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Estilos para el botón de crear receta */
+.create-button {
+  padding: 14px 28px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-button:hover {
+  background-color: #ff3d00;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .recipe-form2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .create-recipe {
+    font-size: 24px;
+  }
+
+  .input-label {
+    font-size: 16px;
+  }
+
+  .input-field,
+  .img-upload,
+  .select-diet {
+    font-size: 14px;
+  }
+
+  .delete-diet-button {
+    font-size: 14px;
+  }
+
+  .create-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+

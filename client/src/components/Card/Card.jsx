@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 import "./Card.css";
 
 const Card = ({ name, image, typeDiets, id, diets }) => {
   useEffect(() => {}, []);
 
   return (
-    <div>
-      <NavLink className="link" to={`/detail/${id}`}>
-        <div className="containerCard">
-          <div className="Carl">
+    <div className="tarjeta">
+     
+        <div className="ContainerCard">
+          <div className="card">
             <div className="imgStore">
               <img
                 src={
@@ -18,7 +18,7 @@ const Card = ({ name, image, typeDiets, id, diets }) => {
                 }
                 alt={name}
               />
-              <div className="contentCard">
+              <div className="contentcard">
                 <h4>{name}</h4>
                 {diets && (
                   <div className="typeDiets">
@@ -36,7 +36,7 @@ const Card = ({ name, image, typeDiets, id, diets }) => {
             </div>
           </div>
         </div>
-      </NavLink>
+   
     </div>
   );
 };

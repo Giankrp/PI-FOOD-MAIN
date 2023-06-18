@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Filter from "../Filter/Filter";
 import Card from "../Card/Card";
 import Paginate from "../Paginate/Paginate"
@@ -60,8 +60,8 @@ const Home = () => {
   // }
 
   return (
-    <div className="homeAll">
-      <div className="containerHome">
+    <div className="HomeAll">
+      <div className="container-home">
         <Nav handleClick={handleClick} />
 
         <Filter
@@ -74,9 +74,9 @@ const Home = () => {
           <h1 className="page-title">Project food</h1>
         </div>
 
-        <div className="paginate">
+        <div className="paginado">
           <Paginate
-            key="paginate"
+            key="paginado"
             recipesPerPage={recipesPerPage}
             allRecipes={allRecipes.length}
             paginate={paginate}
@@ -86,20 +86,20 @@ const Home = () => {
 
         <div className="row">
           {currentRecipes.map((element) => (
+            <NavLink to={"/detail/" + element.id} key={element.id}>
             <Card
-              key={element.id}
-              id={element.id}
               name={element.name}
               image={element.image}
               diets={element.diets}
               typeDiets={element.typeDiets}
             />
+            </NavLink>
           ))}
         </div>
 
-        <div className="paginate">
+        <div className="paginado">
           <Paginate
-            key="paginate"
+            key="paginado"
             recipesPerPage={recipesPerPage}
             allRecipes={allRecipes.length}
             paginate={paginate}

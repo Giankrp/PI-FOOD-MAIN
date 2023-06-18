@@ -104,7 +104,7 @@ const FormCreation = ()=>{
     const handleStep=(event)=> {
         event.preventDefault()
         if(stepDescription !== ""){
-            setListSteps([listSteps, stepDescription])
+            setListSteps([...listSteps, stepDescription])
             setStep(step + 1)
             setStepDescription("")
         }else{
@@ -124,7 +124,7 @@ const FormCreation = ()=>{
     return (
         <div className="recipe-form">
             <div className="recipe-form2">
-                <NavLink>
+                <NavLink to={"/home"}>
                     <button className="button-form-back">Back</button>
                 </NavLink>
                 <h1 className="create-recipe">Create Recipe</h1>
@@ -171,7 +171,7 @@ const FormCreation = ()=>{
                         <label className="input-label">Select diet</label>
                         <select className="select-diet" onChange={(event)=> handleSelect(event)}>
                             <option value="">Select diet</option>
-                            {listDiets.map((diet)=> (
+                            {listDiets && listDiets.map((diet)=> (
                                 <option key={diet.name} value={diet.name}>
                                     {diet.name}
                                 </option>

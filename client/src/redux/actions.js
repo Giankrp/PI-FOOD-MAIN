@@ -41,11 +41,11 @@ export const sortByPuntuation = (payload) => {
 
 export const getRecipesByName = (name) => {
     return async (dispatch) => {
-        await axios.get(`/recipes?name=${name}`)
-            .then(response => {
+        await axios.get(`?name=${name}`)
+            .then((response) => {
                 return dispatch({ type: GET_BY_NAME, payload: response.data })
             })
-            .catch(error => {
+            .catch((error) => {
                 alert("Recipe not found")
             })
     }
@@ -53,7 +53,7 @@ export const getRecipesByName = (name) => {
 
 export const getRecipesById = (idRecipes) => {
     return async (dispatch) => {
-        const { data } = await axios.get(`/recipes/${idRecipes}`)
+        const { data } = await axios.get(`/${idRecipes}`)
         return dispatch({
             type: GET_BY_ID,
             payload: data
@@ -63,7 +63,7 @@ export const getRecipesById = (idRecipes) => {
 
 export const getDiet = () => {
     return async (dispatch) => {
-        const { data } = await axios.get(`/diets`)
+        const { data } = await axios.get(`/`)
         return dispatch({
             type: GET_DIET,
             payload: data
@@ -73,7 +73,7 @@ export const getDiet = () => {
 
 export const postRecipe = (payload) => {
     return async (dispatch) => {
-        const data = await axios.get(`/recipes`, payload)
+        const data = await axios.get(`/`, payload)
         return data
     }
 }

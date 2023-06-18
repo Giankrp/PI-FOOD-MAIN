@@ -5,17 +5,17 @@ import "./LandingPage.css"
 
 const LandingPage = () => {
   return (
-    <div className="Main">
-      <div className="img-container">
-        <img className="img-LandinfPage" src={imgLandingPage} alt="Cargando" />
+    <div className="All">
+      <div className="container-img-landingpageimg-container">
+        <img className="img-landingpage" src={imgLandingPage} alt="Cargando" />
       </div>
 
-      <div className="text-container">
+      <div className="container-text">
         <h1>FOOD APP</h1>
         <p>Aplicacion de comida para que puedas tener una vida saludable</p>
       </div>
 
-      <div className="link-Home">
+      <div className="content">
         <NavLink className="NavLink" to="/home">
           <button>Ver recetas</button>
         </NavLink>

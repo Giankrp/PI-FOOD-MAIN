@@ -1,0 +1,67 @@
+.All {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f7fd;
+  background-image: linear-gradient(to bottom, #f1f7fd, #dbe7f3); /* Agrega un degradado sutil */
+}
+
+.container-img-landingpageimg-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* Agrega un margen inferior para separar la imagen del contenido */
+}
+
+.img-landingpage {
+  border-radius: 50%;
+  height: 40vh;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.img-landingpage:hover {
+  transform: scale(1.1);
+}
+
+.container-text {
+  width: 70%; /* Aumenta el ancho del contenedor de texto para un mejor equilibrio */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333; /* Cambia el color del título para mayor legibilidad */
+}
+
+p {
+  font-size: 1.5rem;
+  color: #555; /* Ajusta el color del texto para mayor contraste */
+  margin-bottom: 2rem;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.NavLink button {
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta el tamaño de fuente del botón */
+  padding: 12px 24px; /* Aumenta el espacio interno del botón para mayor comodidad */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.NavLink button:hover {
+  background-color: #e64a19;
+}
+
+
+
+

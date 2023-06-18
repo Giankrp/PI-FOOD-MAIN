@@ -81,7 +81,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
         case GET_BY_NAME:
             return {
                 ...state,
-                data: payload
+                recipes: payload
             }
         case GET_BY_ID:
             return {

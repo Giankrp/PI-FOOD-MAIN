@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container:hover {
+  background-color: #ddd;
+}
+
+.current {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+.current:hover {
+  background-color: #e64a19;
+}
