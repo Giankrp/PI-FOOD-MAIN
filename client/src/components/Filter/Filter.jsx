@@ -38,8 +38,7 @@ const Filter = ({ setOrden, setCurrentPage }) => {
     <div className="main-container">
       <div className="bar-promo">
         <h4>Hecha un vistazo a todas las recetas que tenemos para ti</h4>
-        <button className="btn-promo">¡Regístrate!</button>
-        <span>Terminos y condiciones</span>
+        <button className="btn-promo">¡Mira quien creó esta pagina!</button>
       </div>
       <div className="filter-item-img">
         <label htmlFor="filter-diet-select-img"></label>

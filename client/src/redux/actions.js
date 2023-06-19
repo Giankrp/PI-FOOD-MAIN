@@ -62,14 +62,15 @@ export const getRecipesById = (idRecipes) => {
 }
 
 export const getDiet = () => {
-    return async (dispatch) => {
-        const { data } = await axios.get(`/`)
-        return dispatch({
-            type: GET_DIET,
-            payload: data
-        })
-    }
-}
+  return async (dispatch) => {
+    const { data } = await axios.get("http://localhost:3001/diets");
+    return dispatch({
+      type: GET_DIET,
+      payload: data,
+    });
+  };
+};
+
 
 export const postRecipe = (payload) => {
     return async (dispatch) => {

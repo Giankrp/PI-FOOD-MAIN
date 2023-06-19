@@ -11,9 +11,9 @@ const formValidate =(input)=>{
 
     if(!input.name) errors.name = "Please enter the name of the recipe"
     if(!input.summary) errors.summary = "Please enter the summary of the recipe"
-    if(input.healtScore < 0 || input.healtScore > 100 || !regrex.test(input.healtScore)) errors.healtScore = 
+    if(input.healhtScore < 0 || input.healthScore > 100) errors.healthScore = 
     "Please enter a health score between 0-100"
-    if(!input.diets) errors.diets = "Please enter a diet of the recipe"
+    if(!input.diet) errors.diet = "Please enter a diet of the recipe"
 
     return errors
 
@@ -22,7 +22,7 @@ const formValidate =(input)=>{
 
 const FormCreation = ()=>{
     const dispatch = useDispatch()
-    let listDiets = useSelector((state) => state.diets)
+    let listDiets = useSelector((state) => state.diet)
     const [errors, setErrors] = useState({})
     const [step, setStep] = useState(1)
     const [listSteps, setListSteps] = useState([])
@@ -30,9 +30,9 @@ const FormCreation = ()=>{
     const [input, setInput] = useState({
         name : "",
         summary : "",
-        healtScore : "",
+        healthScore : "",
         process : "",
-        diets : [],
+        diet : [],
         image : "",
     })
 
@@ -62,14 +62,14 @@ const FormCreation = ()=>{
     const handleSelect = (event)=>{
         setInput({
             ...input,
-            diets : [...input.diets, event.target.value]
+            diet : [...input.diet, event.target.value]
         })
     }
 
     const handleDelete = (diet)=>{
         setInput({
             ...input,
-            diets : input.diets.filter((typeD => typeD !== diet))
+            diet : input.diet.filter((typeD => typeD !== diet))
         })
     }
 
@@ -82,14 +82,14 @@ const FormCreation = ()=>{
         }
         dispatch(postRecipe(recipeData))
 
-        if(input.name && input.summary && input.healtScore && input.process && input.diets){
+        if(input.name && input.summary && input.healthScore && input.process && input.diet){
             alert("Recipe created successfully")
             setInput({
                 name : "",
                 summary : "",
-                healtScore : "",
+                healthScore : "",
                 process : "",
-                diets : [],
+                diet : [],
                 image : "",
             })
         }else{
@@ -122,7 +122,7 @@ const FormCreation = ()=>{
     }
 
     return (
-        <div className="recipe-form">
+    
             <div className="recipe-form2">
                 <NavLink to={"/home"}>
                     <button className="button-form-back">Back</button>
@@ -145,9 +145,9 @@ const FormCreation = ()=>{
 
                     <div className="input">
                         <label className="input-label">HealthScore:</label>
-                        <input type="number" name="healthScore" value={input.healtScore} onChange={(event)=> handleChange(event)} 
-                        className={`input-field ${errors.healtScore ? "input-error" : ""}`}/>
-                        {errors.healtScore && <p className="input-error">{errors.healtScore}</p>}
+                        <input type="number" name="healthScore" value={input.healthScore} onChange={(event)=> handleChange(event)} 
+                        className={`input-field ${errors.healthScore ? "input-error" : ""}`}/>
+                        {errors.healthScore && <p className="input-error">{errors.healthScore}</p>}
                     </div>
 
                     <div className="input">
@@ -178,7 +178,7 @@ const FormCreation = ()=>{
                             ))}
                         </select>
                         <div className="diet-select">
-                            {input.diets.map((diet)=> (
+                            {input.diet.map((diet)=> (
                                 <div key={diet} className="selected-diet">
                                     <button className="delete-diet-button" onClick={()=>handleDelete(diet)}>X</button>
                                     <span>{diet}</span>
@@ -197,7 +197,7 @@ const FormCreation = ()=>{
                 </form>
                 
             </div>
-        </div>
+     
     )
 }
 
