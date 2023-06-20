@@ -74,14 +74,14 @@ export const getDiet = () => {
 
 export const postRecipe = (payload) => {
     return async (dispatch) => {
-        const data = await axios.get(`/`, payload)
+        const data = await axios.post(`/`, payload)
         return data
     }
 }
 
-export const deleteRecipe = (id) => {
+export const deleteRecipe = (idRecipes) => {
     return async (dispatch) => {
-        const { data } = await axios.delete(`/delete/${id}`)
+        const { data } = await axios.delete(`http://localhost:3001/delete/${idRecipes}`)
         return dispatch({
             type: DELETE_RECIPE,
             payload: data

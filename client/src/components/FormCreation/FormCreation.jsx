@@ -6,12 +6,13 @@ import "./FormCreation.css"
 import  ImageCreation from "../images/ImageCreation.jpg"
 
 const formValidate =(input)=>{
-    const regrex = new RegExp("^[0-9]+$")
+    const regrex = new RegExp("^(?:100|[1-9][0-9]?|0)$")
     let errors = {}
 
     if(!input.name) errors.name = "Please enter the name of the recipe"
     if(!input.summary) errors.summary = "Please enter the summary of the recipe"
-    if(input.healhtScore < 0 || input.healthScore > 100) errors.healthScore = 
+    if(input.healhtScore < 0 || input.healthScore > 100 || regrex.test(input.healhtScore))
+     errors.healthScore = 
     "Please enter a health score between 0-100"
     if(!input.diet) errors.diet = "Please enter a diet of the recipe"
 
