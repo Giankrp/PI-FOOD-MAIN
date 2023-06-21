@@ -1,6 +1,7 @@
 import React from "react"
 import { filterByDiet, filter, sortByName, sortByPuntuation } from "../../redux/actions"
 import { useDispatch } from "react-redux"
+import { Link } from "react-router-dom"
 import  dietImages  from "./DietImages"
 import "./Filter.css"
 
@@ -38,7 +39,9 @@ const Filter = ({ setOrden, setCurrentPage }) => {
     <div className="main-container">
       <div className="bar-promo">
         <h4>Hecha un vistazo a todas las recetas que tenemos para ti</h4>
+        <Link to="about">
         <button className="btn-promo">¡Mira quien creó esta pagina!</button>
+        </Link>
       </div>
       <div className="filter-item-img">
         <label htmlFor="filter-diet-select-img"></label>
