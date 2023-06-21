@@ -15,6 +15,13 @@ const rootReducer = (state = initialState, { type, payload }) => {
                 recipes: payload,
                 allRecipes: payload
             }
+        case "DELETE_RECIPES":
+            return {
+                ...state,
+                data : payload
+                
+            }
+
         case SERVER:
             return {
                 ...state,

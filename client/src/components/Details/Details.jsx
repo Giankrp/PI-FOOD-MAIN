@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getRecipesById, deleteRecipe } from "../../redux/actions";
+import { getRecipesById, deleteRecipe, deleteRecipesDetail } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, NavLink } from "react-router-dom";
 import "./Details.css";
@@ -25,7 +25,12 @@ const Details = () => {
 
   useEffect(() => {
     dispatch(getRecipesById(idRecipes));
+    return ()=>{
+      dispatch(deleteRecipesDetail)
+    }
   }, [dispatch, idRecipes]);
+
+
 
   useEffect(() => {
     if (data && data.fromApi) {
@@ -67,8 +72,8 @@ const Details = () => {
           </button>
         </div>
         <img
-          src={data.image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp5A4cM9lx9CVbaN89X1Qu8xxc3rVY_veWIw&usqp=CAU"}
-          alt={data.image}
+          src={data.image}
+          alt={"loanding..."}
           className="details-image"
         />
       </div>

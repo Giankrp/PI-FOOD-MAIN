@@ -89,3 +89,11 @@ export const deleteRecipe = (idRecipes) => {
     }
 }
 
+export const deleteRecipesDetail = (idRecipes) => {
+    return async (dispatch) => {
+        return dispatch({
+            type: "DELETE_RECIPES",
+            payload: []
+        })
+    }
+}
